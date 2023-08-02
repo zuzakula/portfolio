@@ -25,6 +25,7 @@ import mainImage from "./img/main_photo.jpg";
 import { SocialIcon } from "react-social-icons";
 import project1 from "./img/project1.png";
 import project2 from "./img/project2.png";
+import project3 from "./img/project3.png";
 
 const styledAboutMe = {
   image: {
@@ -200,6 +201,11 @@ const imageData = [
     img: project2,
     title: "WebDziekanat",
     url: "https://github.com/zuzakula/web-dziekanat",
+  },
+  {
+    img: project3,
+    title: "Wordle Clone",
+    url: "https://github.com/zuzakula/wordle-clone",
   },
 ];
 
