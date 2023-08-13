@@ -26,6 +26,8 @@ import { SocialIcon } from "react-social-icons";
 import project1 from "./img/project1.png";
 import project2 from "./img/project2.png";
 import project3 from "./img/project3.png";
+import project4 from "./img/project4.png";
+import projectsStyled from "./styles/Projects.styled";
 
 const styledAboutMe = {
   image: {
@@ -121,7 +123,7 @@ const styledProjects = {
   titleImage: {
     fontSize: "2rem",
     color: "white",
-  },
+  }
 };
 
 const theme = createMuiTheme({
@@ -207,6 +209,11 @@ const imageData = [
     title: "Wordle Clone",
     url: "https://github.com/zuzakula/wordle-clone",
   },
+  {
+    img: project4,
+    title: "Pizza Store",
+    url: "https://github.com/zuzakula/pizza-store",
+  },
 ];
 
 const Projects = () => {
@@ -219,10 +226,11 @@ const Projects = () => {
         <ImageList
           sx={{ width: 500, height: 450 }}
           style={{ width: "100%", height: "100%" }}
+          className="projectImages"
         >
           {imageData.map((item) => (
             <ImageListItem key={item.img} style={styledProjects.imageItem}>
-              <img src={`${item.img}`} alt={item.title} loading="lazy" />
+              <img src={`${item.img}`} alt={item.title} loading="lazy" className="projectImg" />
               <ImageListItemBar
                 title={
                   <span>
@@ -394,6 +402,8 @@ const Resume = () => {
               <h4>React Native</h4>
               <LinearProgressWithLabel value={50} />
               <h4>Figma</h4>
+              <LinearProgressWithLabel value={60} />
+              <h4>PHP</h4>
               <LinearProgressWithLabel value={60} />
             </Box>
           </Grid>

@@ -44,3 +44,46 @@ body {
   left: 95%;
   margin-bottom: 10px;
 }
+
+.projectImages {
+  filter: none;
+  transform: scaleY(1);
+}
+
+.projectImg {
+  display: inline-block;
+  width: 100% !important;
+  height: 21em !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 200ms ease-in;
+  filter: grayscale(1) opacity(.8);
+}
+
+.projectImg:hover {
+  filter: grayscale(0) opacity(1);
+}
+
+.projectImg::before,
+.projectImg::after {
+  transform: scaleY(-1);
+}
+
+.projectImg:hover::after {
+  content: '';
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  bottom: -25%;
+}
+
+.projectImg:hover::before {
+  content: '';
+  width: inherit;
+  height: 42%;
+  position: absolute;
+  bottom: -25%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .9),rgba(255, 255, 255, .5));
+  z-index: 1;
+}
