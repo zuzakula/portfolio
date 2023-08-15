@@ -404,7 +404,9 @@ const Resume = () => {
               <h4>Figma</h4>
               <LinearProgressWithLabel value={60} />
               <h4>PHP</h4>
-              <LinearProgressWithLabel value={60} />
+              <LinearProgressWithLabel value={55} />
+              <h4>Java/Spring</h4>
+              <LinearProgressWithLabel value={55} />
             </Box>
           </Grid>
           <Grid item xs={6}>
